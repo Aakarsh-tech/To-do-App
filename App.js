@@ -1,4 +1,3 @@
-// Import necessary libraries
 import React, { useState } from 'react';
 import {
   StyleSheet,
@@ -14,7 +13,7 @@ export default function App() {
   const [task, setTask] = useState('');
   const [editingIndex, setEditingIndex] = useState(null);
 
-  // Add or update a task
+
   const handleAddOrUpdateTask = () => {
     if (task.trim() === '') return;
 
@@ -29,14 +28,10 @@ export default function App() {
 
     setTask('');
   };
-
-  // Edit a task
   const handleEditTask = (index) => {
     setTask(tasks[index]);
     setEditingIndex(index);
   };
-
-  // Delete a task
   const handleDeleteTask = (index) => {
     const updatedTasks = tasks.filter((_, i) => i !== index);
     setTasks(updatedTasks);
